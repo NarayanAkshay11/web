@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASV Team Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="ASV Team Logo" class="logo">
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="asv.html">ASV</a>
+            <a href="team.html">Team</a>
+            <a href="papers.html">Papers</a>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search...">
+            <button id="search-button">Search</button>
+        </div>
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    </header>
+    <main>
+        <div class="video-background">
+            <video autoplay muted loop id="background-video">
+                <source src="video/background.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay"></div>
+            <div class="content">
+                <h1>Welcome to the ASV Team</h1>
+                <p>Your innovation starts here.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.020648076813!2d-122.083847084681!3d37.38605177982545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5c99d8e5d4f%3A0xd0930de67a0c4a2e!2sGoogleplex!5e0!3m2!1sen!2sus!4v1638404315282!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <img src="images/ntu.png" alt="University Logo" class="footer-logo">
+            <p>© 2024 ASV Team. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
