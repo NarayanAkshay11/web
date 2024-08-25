@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('active');
     });
 
-    // Optional: Add functionality for the search button
     document.getElementById('search-button').addEventListener('click', () => {
         const query = document.getElementById('search-bar').value;
         if (query) {
+            // Replace this alert with actual search functionality if needed
             alert('Search functionality not implemented');
         }
     });
