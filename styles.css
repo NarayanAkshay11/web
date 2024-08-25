@@ -67,6 +67,7 @@ header {
     padding: 0.5em;
     margin-left: auto;
     gap: 0.5em;
+    flex: 1; /* Allow to grow on larger screens */
 }
 
 #search-bar {
@@ -75,7 +76,7 @@ header {
     border-radius: 4px;
     outline: none;
     flex: 1;
-    width: 200px; /* Fixed width to prevent overflow */
+    max-width: 200px; /* Prevent overflow */
 }
 
 #search-button {
@@ -214,7 +215,7 @@ footer p {
     }
 
     #search-bar {
-        width: 100%;
+        width: calc(100% - 40px); /* Adjust width for mobile */
     }
 
     #search-button {
