@@ -1,42 +1,42 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const searchButton = document.getElementById('search-button');
-    const searchBar = document.getElementById('search-bar');
-    const currentPage = window.location.pathname.split('/').pop();
+// Function to show tab content
+function showTab(tabId) {
+    const tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => tab.style.display = 'none');
+    document.getElementById(tabId).style.display = 'block';
+}
 
-    // Set active link based on current page
-    document.querySelectorAll('.nav-item').forEach(item => {
-        if (item.getAttribute('href') === currentPage) {
-            item.classList.add('active');
-        }
+// Function to handle search functionality
+document.getElementById('search-bar').addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    const pages = ['index.html', 'about.html', 'asv.html', 'team.html', 'papers.html'];
+
+    pages.forEach(page => {
+        fetch(page)
+            .then(response => response.text())
+            .then(text => {
+                if (text.toLowerCase().includes(query)) {
+                    window.location.href = page;
+                }
+            });
     });
+});
 
-    // Menu toggle functionality for mobile
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-
-    // Search button functionality
-    searchButton.addEventListener('click', () => {
-        const query = searchBar.value.trim();
-        if (query) {
-            // Redirect to search results page or perform an actual search
-            window.location.href = `search.html?q=${encodeURIComponent(query)}`;
-        }
-    });
-
-    // Close mobile menu when a link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
+// Function to load team and papers from markdown files
+function loadMarkdown(contentUrl, elementId) {
+    fetch(contentUrl)
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById(elementId).innerHTML = marked(text);
         });
-    });
+}
 
-    // Optional: Handle Enter key press in search bar
-    searchBar.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            searchButton.click();
-        }
-    });
+// Load team and paper data
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.getElementById('team-content')) {
+        loadMarkdown('markdown/team.md', 'team-content');
+    }
+    if (document.getElementById('individual') || document.getElementById('team')) {
+        loadMarkdown('markdown/papers.md', 'individual'); // Adjust as needed for team papers
+        loadMarkdown('markdown/papers.md', 'team'); // Adjust as needed for team papers
+    }
 });
