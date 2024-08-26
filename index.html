@@ -3,48 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Home - RobotX Team</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="Logo" class="logo">
-        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-        <nav class="nav-links">
-            <a href="index.html" class="nav-item">Home</a>
-            <a href="about.html" class="nav-item">About</a>
-            <a href="asv.html" class="nav-item">ASV</a>
-            <a href="team.html" class="nav-item">Team</a>
-            <a href="papers.html" class="nav-item">Papers</a>
-        </nav>
-        <div class="search-container">
-            <input type="text" id="search-bar" placeholder="Search...">
-            <button id="search-button">
-                <img src="search-icon.png" alt="Search">
-            </button>
-        </div>
+        <img src="images/logo.png" alt="Team Logo" class="logo">
+        <input type="text" id="search-bar" placeholder="Search...">
     </header>
-
-    <div class="video-background">
-        <video id="background-video" autoplay muted loop>
-            <source src="background-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="overlay"></div>
-        <div class="content">
-            <h1>Welcome to the ASV Project</h1>
-            <p>Building the future of autonomous surface vehicles for RobotX.</p>
-        </div>
-    </div>
-
+    <main>
+        <section class="hero">
+            <video autoplay loop muted class="hero-video">
+                <source src="images/competition.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-text">
+                <h1>Welcome to Our RobotX Team Website</h1>
+                <p>We are passionate about robotics and excited to participate in the RobotX competition. Explore our website to learn more about our team, our autonomous surface vehicle, and our research.</p>
+            </div>
+        </section>
+    </main>
     <footer>
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.423378636399!2d-122.08424968468177!3d37.42199977982532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb51d0dbe3dcb%3A0x3f6f6c3a1f7d7de8!2sGoogleplex!5e0!3m2!1sen!2sus!4v1631742900555!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-        <img src="ntu.png" alt="University Logo" class="footer-logo">
-        <p>&copy; 2024 University Name. All rights reserved.</p>
+        <p>&copy; 2024 RobotX Team | Created by Me</p>
     </footer>
-
-    <script src="script.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
