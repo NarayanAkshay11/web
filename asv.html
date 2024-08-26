@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASV Specifications - RobotX Team</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Team Logo" class="logo">
+        <input type="text" id="search-bar" placeholder="Search...">
+    </header>
+    <main>
+        <section class="asv">
+            <h1>Autonomous Surface Vehicle Specifications</h1>
+            <img src="images/asv.jpg" alt="ASV Image">
+            <div class="tabs">
+                <button class="tab" onclick="showTab('mechanical')">Mechanical</button>
+                <button class="tab" onclick="showTab('electrical')">Electrical</button>
+                <button class="tab" onclick="showTab('software')">Software</button>
+                <button class="tab" onclick="showTab('communication')">Communication</button>
+            </div>
+            <div id="mechanical" class="tab-content">
+                <h2>Mechanical Design</h2>
+                <p>Our ASV's mechanical design includes a robust hull capable of withstanding harsh maritime conditions. It features reinforced materials and a streamlined shape for improved performance in turbulent waters.</p>
+            </div>
+            <div id="electrical" class="tab-content" style="display:none;">
+                <h2>Electrical Systems</h2>
+                <p>The electrical circuitry includes high-efficiency batteries and advanced sensor systems for optimal performance. The design ensures reliability and minimal power consumption during extended missions.</p>
+            </div>
+            <div id="software" class="tab-content" style="display:none;">
+                <h2>Software Architecture</h2>
+                <p>Our software architecture is designed for flexibility and efficiency, incorporating state-of-the-art algorithms for navigation and control. The system is modular, allowing for easy updates and improvements.</p>
+            </div>
+            <div id="communication" class="tab-content" style="display:none;">
+                <h2>Communication</h2>
+                <p>We utilize robust communication protocols to ensure seamless data transfer and control between the ASV and remote systems. The setup includes both real-time data streaming and secure command channels.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 RobotX Team | Created by Me</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
