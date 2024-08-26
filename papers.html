@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papers - RobotX Team</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Team Logo" class="logo">
+        <input type="text" id="search-bar" placeholder="Search...">
+    </header>
+    <main>
+        <section class="papers">
+            <h1>Academic Papers</h1>
+            <div class="tabs">
+                <button class="tab" onclick="showTab('individual')">Individual</button>
+                <button class="tab" onclick="showTab('team')">Team</button>
+            </div>
+            <div id="individual" class="tab-content">
+                <!-- Individual papers will be dynamically loaded here -->
+            </div>
+            <div id="team" class="tab-content" style="display:none;">
+                <!-- Team papers will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 RobotX Team | Created by Me</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
